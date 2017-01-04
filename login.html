@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LOGIN PAGE</title>
+    <script type="text/javascript" src="login.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">SpaceLive.com</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <form id="myForm" method="POST">
+        <h2><b>Welcome back! </b></h2>
+
+        <div class="Container">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="email" placeholder="Email" class="form-control" name="username" id="username" required>
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" class="form-control" name="pwd" id="pwd" class="form-control" required>
+
+            </div>
+            <div class="check">
+                <span class="box">
+              <input type="checkbox" name="checkbox" id="checkbox"> Remember me</span>
+
+                <span class="forgotpwd"><a data-toggle="modal" href="#myModal">Forgot password?</a></span> </div>
+            <button type="button" onclick="login();">Sign in</button>
+
+        </div>
+    </form>
+
+
+
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Email Recovery</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="username">Email id</label>
+                        <input type="email" placeholder="Email" class="form-control" name="username" id="username" required>
+                        <label for="newpassword">New Password</label>
+                        <input type="password" placeholder="New Password" class="form-control" name="newpwd" id="newpwd" class="form-control" required>
+                        <label for="confirmpassword">Confirm Password</label>
+                        <input type="password" placeholder="Confirm Password" class="form-control" name="confirmpwd" id="confirmpwd" class="form-control" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="submit" data-dismiss="modal">Submit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+body {
+    background-image: url("wallpaper.jpg");
+    background-size: cover;       
+}
+form {
+    margin: 0px auto;
+    width: 600px;
+    border: 5px solid gray;
+    border-radius: 20px;
+    background-color: lightgrey;
+    opacity: 0.8;
+}
+.FormElement {
+    padding: 30px 60px 0 40px;
+}
+button {
+    background-color: seagreen;
+    color: black;
+    box-shadow: 5px 5px 5px;
+    width: 60%;
+    padding: 12px 30px 12px 1px;
+    margin: 10% 10% 10% 20%;
+    border: none;
+}
+button:hover {
+    opacity: 0.8;
+}
+textarea{
+    resize:none;
+}
+.navbar-brand {
+    font-family: Cambria, Georgia, serif;
+    font-style: italic;
+    font-size: 20px;
+}

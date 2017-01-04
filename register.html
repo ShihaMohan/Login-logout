@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>REGISTRATION PAGE</title>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <script type="text/javascript" src="register.js">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="register.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">SpaceLive.com</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="login.html"><span class="glyphicon glyphicon-home"></span> Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <form name="myForm" id="myForm" method="post" autocomplete="off">
+        <h2><b>Register Here.. </b></h2>
+
+        <div class="FormElement">
+            <div class="row">
+
+
+                <div class="col xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-group">
+                        <label for="FirstName">First Name</label>
+                        <input type="text" class="form-control" name="FirstName" id="FirstName" placeholder="Enter First Name" oninput="FnameValidate()" required>
+                        <span class="fnamemessage" id="fnamemessage"></span>
+                    </div>
+
+
+
+
+
+                    <div class="form-group">
+                        <label for="LastName">Last Name</label>
+                        <input type="text" class="form-control" name="LastName" id="LastName" placeholder="Enter Last Name" oninput="LnameValidate();" required>
+                        <span class="lnamemessage" id="lnamemessage"></span>
+                    </div>
+
+
+
+
+                    <div class="form-group">
+                        <label for="emailid">Email id</label>
+                        <input type="email" class="form-control" name="emailid" id="emailid" placeholder="Enter Email" oninput="EmailValidate();" required>
+                        <span class="emailmessage" id="emailmessage"></span>
+                    </div>
+
+
+
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="psw" oninput="PwdStrength();" onblur="MessageHide();" placeholder="Password" required>
+                        <span id="pwdmessage" class="pwdmessage"></span>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="confirmpassword">Confirm Password</label>
+                        <input type="password" class="form-control" id="cpsw" placeholder="Confirm Password" oninput="CheckPassword();" onblur="checkpasswordmsg();" required>
+                        <span id="ConfirmMessage" class="ConfirmMessage"></span>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="MobileNumber">Mobile Number</label>
+                        <input type="text" class="form-control" name="MobileNumber" id="MobileNumber" placeholder="Enter Mobile Number" oninput="NumberValidate();" required>
+                        <span class="mmessage" id="mmessage"></span>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="permanentaddress">Permanent Address</label>
+                        <textarea rows="3" class="form-control" name="permanent_address" id="permanent_address" placeholder="Enter Permanent Address"></textarea>
+                    </div>
+
+
+                    <center>
+                        <input type="checkbox" name="checkbox" onclick="CopyAddress();" >Same as above</center>
+
+
+
+                    <div class="form-group">
+                        <label for="contactaddress">Contact Address</label>
+                        <textarea rows="3" class="form-control" name="contact_address" id="contact_address" placeholder=" Enter Contact Address"></textarea>
+                    </div>
+
+
+
+
+
+                    <div class="form-group">
+                        <div class="col xs-2 col-sm-2 col-md-2 col-lg-2">
+                            <label for="gender">Gender</label>
+                        </div>
+                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                            <input type="radio" class="form-check" name="gender" value="male" checked>Male
+                            <input type="radio" name="gender" class="form-check" value="female">Female
+                        </div>
+                    </div>
+                    <button type="button" value="submit" onclick="return RegisterStore();">Sign Up</button>
+                </div>
+            </div>
+    </form>
+
+</body>
+
+</html>
